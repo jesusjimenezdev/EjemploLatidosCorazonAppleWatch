@@ -29,5 +29,9 @@
 	<string>com.jesusjimenez.EjemploLatidosCorazonAppleWatch</string>
 	<key>WKWatchKitApp</key>
 	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>healthkit</string>
+	</array>
 </dict>
 </plist>

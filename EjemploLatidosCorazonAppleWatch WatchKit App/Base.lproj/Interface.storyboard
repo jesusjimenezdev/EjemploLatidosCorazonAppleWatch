@@ -1,15 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="EjemploLatidosCorazonAppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" verticalAlignment="center" id="QlB-N9-hej">
+                            <items>
+                                <imageView width="35" height="35" alignment="left" image="heart" id="8L0-tC-KCN"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="center" id="m7R-XY-dD8">
+                            <items>
+                                <label alignment="left" text="---" id="Uno-gc-9Cb">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                </label>
+                                <label alignment="left" text="LPM" id="aws-8x-7HA">
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Start" id="vl6-9k-Gl8">
+                            <connections>
+                                <action selector="btnMedirPulsaciones" destination="AgC-eL-Hgc" id="wSs-cw-oRF"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnPulsaciones" destination="vl6-9k-Gl8" id="z8e-Wi-SGn"/>
+                        <outlet property="labelLatidos" destination="Uno-gc-9Cb" id="gAA-dy-XmB"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="30.948717948717952"/>
         </scene>
     </scenes>
 </document>
